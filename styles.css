@@ -1,0 +1,85 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* 1st section classes */
+.navbar {
+    justify-content: space-between;
+}
+
+.menu-icon {
+    margin-left: 15px;
+
+}
+
+.menu-icon button {
+    border: none;
+}
+
+.brand-title {
+    margin-left: 10px;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+}
+
+.menu-brand-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.profile-img {
+    margin-right: 20px;
+    margin-left: 25px;
+}
+
+.profile-img img {
+    width: 30px;
+}
+
+.next-icon,
+.prev-icon {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 2nd section classes */
+.info-container h1,
+.info-container p {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.company-name {
+    color: hsl(26, 100%, 55%);
+    font-size: 16px;
+}
+
+/* CSS rules */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {...} */
