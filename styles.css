@@ -1,6 +1,7 @@
 .attribution {
     font-size: 11px;
     text-align: center;
+    margin-top: 40px;
 }
 
 .attribution a {
@@ -57,15 +58,145 @@
 }
 
 /* 2nd section classes */
+.info-container {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
 .info-container h1,
 .info-container p {
     font-family: 'Kumbh Sans', sans-serif;
-}
-
-.company-name {
-    color: hsl(26, 100%, 55%);
     font-size: 16px;
 }
+
+.company-name h1 {
+    color: hsl(26, 100%, 55%);
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.product-title h1 {
+    font-weight: 700;
+    font-size: 27px;
+    margin-bottom: 15px
+}
+
+.product-description p {
+    color: hsl(219, 9%, 45%);
+}
+
+/* 3rd section classes */
+
+.prices-container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.prices-container h1 {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 700;
+}
+
+.discount-container {
+    display: flex;
+    align-items: center;
+}
+
+.discount-price {
+    margin-right: 15px;
+}
+
+.discount-percentage h1 {
+    color: hsl(26, 100%, 55%);
+    font-size: 16px;
+    background-color: hsl(25, 100%, 94%);
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+
+.no-discount-price h1 {
+    color: hsl(220, 14%, 75%);
+    font-size: 16px;
+    text-decoration: line-through;
+}
+
+.selection-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: hsl(223, 64%, 98%);
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.selection-container h2 {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.minus-icon h2,
+.plus-icon h2 {
+    color: hsl(26, 100%, 55%);
+}
+
+.minus-icon h2 {
+    margin-left: 15px;
+}
+
+.plus-icon h2 {
+    margin-right: 15px;
+}
+
+.total-selection h2 {
+    font-size: 16px;
+}
+
+.add-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px
+}
+
+.add-button button {
+    border: none;
+    background-color: hsl(26, 100%, 55%);
+    border-radius: 4px;
+    width: 90%;
+    padding: 10px 0px;
+    box-shadow: 4px 14px 15px 6px hsl(25deg 100% 94%);
+}
+
+.add-button span {
+    display: flex;
+    justify-content: center;
+}
+
+span h2 {
+    color: white;
+    font-size: 16px;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 700;
+}
+
+span img {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(218deg) brightness(160%) contrast(103%);
+    width: 17px;
+    height: 17px;
+    margin-right: 15px;
+}
+
 
 /* CSS rules */
 
