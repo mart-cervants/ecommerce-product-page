@@ -1,16 +1,65 @@
-.attribution {
-    font-size: 11px;
-    text-align: center;
-    margin-top: 40px;
+/* Cart-info */
+.show-cart {
+    width: 18rem;
+    padding: 2rem 1.5rem;
+    transform: rotateY(-360deg);
 }
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
+.cart {
+    position: absolute;
+    top: 55px;
+    z-index: 2;
+    background-color: white;
+    width: 95%;
+    height: 80%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart p {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 700;
+}
+
+.items-cart {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.items-cart p {
+    text-align: center;
+    color: hsl(219, 9%, 45%);
+}
+
+.header-cart p {
+    margin: 20px;
+    font-size: 18px;
 }
 
 /* 1st section classes */
 .navbar {
     justify-content: space-between;
+}
+
+.offcanvas-start {
+    width: 250px;
+}
+
+.justify-content-end {
+    justify-content: flex-start !important;
+    margin-left: 20px;
+}
+
+.nav-item a {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 700;
+}
+
+.btn-close {
+    background: url(images/icon-close.svg) center/1em auto no-repeat;
 }
 
 .menu-icon {
@@ -55,6 +104,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.cart-icon {
+    cursor: pointer;
 }
 
 /* 2nd section classes */
@@ -197,11 +250,30 @@ span img {
     margin-right: 15px;
 }
 
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
 
 /* CSS rules */
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
+@media only screen and (min-width: 992px) {
+    .nav-item a {
+        font-weight: 400;
+        font-size: 15px;
+    }
+
+    .brand-title {
+        margin-bottom: 10px;
+    }
+}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /* @media only screen and (min-width: 600px) {...} */

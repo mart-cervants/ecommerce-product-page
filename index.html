@@ -38,60 +38,77 @@
   <body>
     <div class="global-container">
       <section class="images-section">
+        <!-- Navbar  -->
         <div class="nav-bar-container">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="menu-brand-container">
-              <div class="menu-icon">
-                <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-toggle="collapse"
-                  data-target="#navbarNav"
-                  aria-controls="navbarNav"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <img src="images\icon-menu.svg" alt="" />
-                </button>
+          <nav class="navbar navbar-light bg-light fixed-top navbar-expand-lg">
+            <div class="container-fluid">
+              <div class="menu-brand-container">
+                <div class="menu-icon">
+                  <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar"
+                  >
+                    <img src="images\icon-menu.svg" alt="" />
+                  </button>
+                </div>
+                <div class="brand-title">
+                  <a class="navbar-brand" href="#"
+                    ><img src="images\logo.svg" alt=""
+                  /></a>
+                </div>
               </div>
 
-              <div class="brand-title">
-                <a class="navbar-brand" href="#"
-                  ><img src="images\logo.svg" alt=""
-                /></a>
+              <div
+                class="offcanvas offcanvas-start"
+                tabindex="-1"
+                id="offcanvasNavbar"
+              >
+                <div class="offcanvas-header">
+                  <button
+                    type="button"
+                    class="btn-close text-reset"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#"
+                        >Collections</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Men</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Women</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Contact</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Collections</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Men</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Women</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="icon-container">
-              <div class="cart-icon">
-                <img src="images\icon-cart.svg" alt="" />
-              </div>
-              <div class="profile-img">
-                <img src="images\image-avatar.png" alt="" />
+              <div class="icon-container">
+                <div class="cart-icon">
+                  <img src="images\icon-cart.svg" alt="" />
+                </div>
+                <div class="profile-img">
+                  <img src="images\image-avatar.png" alt="" />
+                </div>
               </div>
             </div>
           </nav>
         </div>
+
+        <!-- Carousel  -->
         <div class="carousel-container">
           <div
             id="carouselExampleControls"
@@ -99,6 +116,16 @@
             data-bs-ride="carousel"
           >
             <div class="carousel-inner">
+              <!-- Cart-info -->
+              <div id="cart" class="cart">
+                <div class="header-cart">
+                  <p>Cart</p>
+                  <hr class="solid" />
+                </div>
+                <div class="items-cart"><p>Your cart is empty</p></div>
+              </div>
+              <!-- End of cart-info -->
+
               <div class="carousel-item active">
                 <img
                   src="images\image-product-1.jpg"
@@ -214,11 +241,21 @@
       </section>
     </div>
 
+    <!-- JQuery JS -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <!-- Bootstrap JS -->
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"
+      integrity="sha512-pax4MlgXjHEPfCwcJLQhigY7+N8rt6bVvWLFyUMuxShv170X53TRzGPmPkZmGBhk+jikR8WBM4yl7A9WMHHqvg=="
       crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     ></script>
 
     <!-- JS -->
