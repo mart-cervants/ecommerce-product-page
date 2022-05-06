@@ -1,22 +1,24 @@
-/* Cart-info */
+/*===== cart-info =====*/
 .show-cart {
-    width: 18rem;
-    padding: 2rem 1.5rem;
-    transform: rotateY(-360deg);
+    transform: translateY(10px);
+    visibility: visible !important;
+    transition: all 500ms;
 }
 
 .cart {
     position: absolute;
-    top: 55px;
+    top: 45px;
     z-index: 2;
     background-color: white;
-    width: 95%;
-    height: 80%;
+    width: 357px;
+    height: 255px;
     margin-left: 2.5%;
     margin-right: 2.5%;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
+    visibility: hidden;
+    box-shadow: 0px 5px 150px -20px;
 }
 
 .cart p {
@@ -39,7 +41,62 @@
     font-size: 18px;
 }
 
-/* 1st section classes */
+.items-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-item img {
+    width: 50px;
+    border-radius: 5px;
+}
+
+.button-checkout {
+    width: 100%;
+}
+
+.button-checkout button {
+    border: none;
+    background-color: hsl(26, 100%, 55%);
+    border-radius: 4px;
+    width: 90%;
+    padding: 5px 0px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.button-checkout p {
+    color: white;
+    margin: 8px 0;
+}
+
+.info-item {
+    position: relative;
+    right: 10px;
+}
+
+.info-item p {
+    margin-bottom: 3px;
+    color: hsl(219, 9%, 45%);
+    font-weight: 400;
+}
+
+.info-item span {
+    color: black;
+    font-weight: 700;
+}
+
+/*===== 1st section classes =====*/
 .navbar {
     justify-content: space-between;
 }
@@ -110,7 +167,7 @@
     cursor: pointer;
 }
 
-/* 2nd section classes */
+/*===== 2nd section classes =====*/
 .info-container {
     margin-top: 20px;
     margin-left: 20px;
@@ -140,7 +197,7 @@
     color: hsl(219, 9%, 45%);
 }
 
-/* 3rd section classes */
+/*===== 3rd section classes =====*/
 
 .prices-container {
     display: flex;
@@ -261,7 +318,7 @@ span img {
 }
 
 
-/* CSS rules */
+/*===== CSS rules =====*/
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (min-width: 992px) {

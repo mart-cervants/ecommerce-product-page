@@ -38,7 +38,7 @@
   <body>
     <div class="global-container">
       <section class="images-section">
-        <!-- Navbar  -->
+        <!-- navbar  -->
         <div class="nav-bar-container">
           <nav class="navbar navbar-light bg-light fixed-top navbar-expand-lg">
             <div class="container-fluid">
@@ -107,8 +107,9 @@
             </div>
           </nav>
         </div>
+        <!-- end of navbar -->
 
-        <!-- Carousel  -->
+        <!-- carousel  -->
         <div class="carousel-container">
           <div
             id="carouselExampleControls"
@@ -116,15 +117,35 @@
             data-bs-ride="carousel"
           >
             <div class="carousel-inner">
-              <!-- Cart-info -->
+              <!-- cart-info -->
               <div id="cart" class="cart">
                 <div class="header-cart">
                   <p>Cart</p>
                   <hr class="solid" />
                 </div>
-                <div class="items-cart"><p>Your cart is empty</p></div>
+                <!-- <div class="items-cart"><p>Your cart is empty</p></div> -->
+
+                <!-- displaying items added -->
+                <div class="cart-container">
+                  <div class="items-container">
+                    <div class="img-item">
+                      <img src="images\image-product-1-thumbnail.jpg" alt="" />
+                    </div>
+                    <div class="info-item">
+                      <p>Autumn Limited Edition...</p>
+                      <p>$125.00 x 3 <span>$375.00</span></p>
+                    </div>
+                    <div class="delete-icon">
+                      <img src="images\icon-delete.svg" alt="" />
+                    </div>
+                  </div>
+                  <div class="button-checkout">
+                    <button><p>Checkout</p></button>
+                  </div>
+                </div>
+                <!-- end of displaying items added -->
               </div>
-              <!-- End of cart-info -->
+              <!-- end of cart-info -->
 
               <div class="carousel-item active">
                 <img
@@ -218,7 +239,7 @@
         </div>
         <div class="selection-container">
           <div class="minus-icon"><h2>-</h2></div>
-          <div class="total-selection"><h2>0</h2></div>
+          <div class="total-selection"><h2>1</h2></div>
           <div class="plus-icon"><h2>+</h2></div>
         </div>
         <div class="add-button">
