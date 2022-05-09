@@ -1,15 +1,11 @@
 //===== showing cart-info =====
-const cartIcon = $(".cart-icon img");
+const cartIcon = $("div .cart-icon");
 const cart = $("#cart");
 
 cartIcon.on("click", () => {
   cart.toggleClass("show-cart");
 });
 //===== end of showing cart-info =====
-
-//===== add items to cart =====
-
-//===== end of add items to cart =====
 
 //===== add items to counter =====
 const plusIcon = $(".plus-icon h2");
@@ -32,9 +28,45 @@ minusIcon.on("click", () => {
 
 //===== add to car =====
 const addToCarBtn = $(".add-button button");
+let prevAdded = false;
 
 addToCarBtn.on("click", () => {
-  // first shows empty cart box
-  // when click add to cart box element
+  if (prevAdded == false) {
+    const cartEmptyElement = document.querySelector("div .items-cart");
+    const newItem = document.createElement("div");
+    newItem.classList.add("cart-container");
+    newItem.innerHTML =
+      "<div class='items-container'><div class='img-item'><img src='images\\image-product-1-thumbnail.jpg' alt='' /></div><div class='info-item'><p>Autumn Limited Edition...</p><p>$125.00 x 3 <span>$375.00</span></p></div><div class='delete-icon'><img src='images\\icon-delete.svg' alt='' /></div></div><div class='button-checkout'><button><p>Checkout</p></button></div>";
+    cartEmptyElement.replaceWith(newItem);
+    prevAdded = true;
+
+    // add a notification to cart icon
+    const cartDiv = document.querySelector("div .cart-icon");
+    const cartNotification = document.createElement("div");
+    cartNotification.classList.add("cart-counter-items");
+    cartNotification.innerHTML = "<p>3</p>";
+    cartDiv.prepend(cartNotification);
+
+    // call to delete item if delete-icon is pressed
+    const removeFromCart = $("div .delete-icon");
+    itemDeleted(removeFromCart);
+  }
 });
 //===== end of add to car =====
+
+//===== remove from car =====
+itemDeleted = (removeFromCart) => {
+  removeFromCart.on("click", () => {
+    const cartItems = document.querySelector("div .cart-container");
+    const cartEmpty = document.createElement("div");
+    cartEmpty.classList.add("items-cart");
+    cartEmpty.innerHTML = "<p>Your cart is empty.</p>";
+    cartItems.replaceWith(cartEmpty);
+    prevAdded = false;
+
+    // remove notification from cart icon
+    const cartDiv = document.querySelector("div .cart-icon");
+    cartDiv.removeChild(cartDiv.firstElementChild);
+  });
+};
+//===== end of remove from car =====
