@@ -1,6 +1,7 @@
 //===== showing cart-info =====
 const cartIcon = $("div .cart-icon");
 const cart = $("#cart");
+console.log(cart);
 
 cartIcon.on("click", () => {
   cart.toggleClass("show-cart");
@@ -26,17 +27,44 @@ minusIcon.on("click", () => {
 });
 //===== end of add items to counter =====
 
+// ===== getting price from item =====
+const priceItem = document.querySelector(".discount-price h1");
+let priceItemStr = priceItem.innerHTML;
+let dollarSign = /^\$/; // look for the dollar sign at the beginning
+let priceItemNum = priceItemStr.replace(dollarSign, "");
+let floatPriceItem = parseFloat(priceItemNum);
+floatPriceItem = floatPriceItem.toFixed(2);
+// ===== end of getting price from item =====
+
 //===== add to car =====
 const addToCarBtn = $(".add-button button");
 let prevAdded = false;
 
 addToCarBtn.on("click", () => {
   if (prevAdded == false) {
+    let totalPrice = floatPriceItem * numCounter;
+    totalPrice = totalPrice.toFixed(2);
+
     const cartEmptyElement = document.querySelector("div .items-cart");
     const newItem = document.createElement("div");
     newItem.classList.add("cart-container");
-    newItem.innerHTML =
-      "<div class='items-container'><div class='img-item'><img src='images\\image-product-1-thumbnail.jpg' alt='' /></div><div class='info-item'><p>Autumn Limited Edition...</p><p>$125.00 x 3 <span>$375.00</span></p></div><div class='delete-icon'><img src='images\\icon-delete.svg' alt='' /></div></div><div class='button-checkout'><button><p>Checkout</p></button></div>";
+    newItem.innerHTML = `
+    <div class='items-container'>
+      <div class='img-item'>
+        <img src='images\\image-product-1-thumbnail.jpg' alt='' />
+      </div>
+      <div class='info-item'>
+        <p>Autumn Limited Edition...</p>
+        <p>${floatPriceItem} x ${numCounter} <span>$${totalPrice}</span></p>
+      </div>
+      <div class='delete-icon'>
+        <img src='images\\icon-delete.svg' alt='' />
+      </div>
+    </div>
+    <div class='button-checkout'>
+      <button><p>Checkout</p></button>
+    </div>
+    `;
     cartEmptyElement.replaceWith(newItem);
     prevAdded = true;
 
@@ -44,7 +72,7 @@ addToCarBtn.on("click", () => {
     const cartDiv = document.querySelector("div .cart-icon");
     const cartNotification = document.createElement("div");
     cartNotification.classList.add("cart-counter-items");
-    cartNotification.innerHTML = "<p>3</p>";
+    cartNotification.innerHTML = `<p>${numCounter}</p>`;
     cartDiv.prepend(cartNotification);
 
     // call to delete item if delete-icon is pressed
